@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a user management application built with React, React Router, and React Hook Form. The app allows you to create, list, edit, and delete users. Additionally, it supports assigning roles and ensuring proper access control. It is a lightweight application that can be used to support help the user management for the management as well as the HR departments.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Listing**: View a list of users.
+- **Create User**: Add a new user to the list.
+- **Edit User**: Modify the details of an existing user.
+- **Delete User**: Remove users from the list.
+- **Role Assignment**: Assign roles to users, such as Crew, Fleet Manager, TSI, and Admin.
+- **Validation**: Form validation to ensure data integrity.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router
+- React Hook Form
+- React Toastify for notifications
+- CSS for styling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/user-management-app.git
+   cd user-management-app
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app will be available at `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app communicates with a backend server to manage user data. It also builds and ensures that the json-based backend server, built using the React JSON server package, is running and accessible at `http://localhost:8000`.
 
-### `npm run eject`
+### Endpoints
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `GET /user` - Fetch all users
+- `POST /user` - Create a new user
+- `GET /user/:id` - Fetch a specific user by ID
+- `PUT /user/:id` - Update a specific user by ID
+- `DELETE /user/:id` - Delete a specific user by ID
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `App.js`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The main component that sets up routing for the application.
 
-## Learn More
+### `UserListing.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Displays the list of users with options to add, edit, or delete users.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `UserCreate.js`
 
-### Code Splitting
+Form to create a new user.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `EditForm.js`
 
-### Analyzing the Bundle Size
+Form to edit an existing user.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+### User Listing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The main page displays a list of users. You can select users using the checkboxes provided.
 
-### Advanced Configuration
+### Add New User
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Click the "Add New" button to navigate to the user creation form. Fill in the details and submit the form to add a new user.
 
-### Deployment
+### Edit User
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Select exactly one user and click the "Edit" button to navigate to the user editing form. Modify the details and submit the form to update the user.
 
-### `npm run build` fails to minify
+### Delete User
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Select one or more users and click the "Delete" button to remove the selected users from the list.
+
+## Form Validation
+
+The forms include validation to ensure that:
+
+- Name and email are required fields.
+- Age must be a number between 18 and 50.
+- User type must be selected from the provided options.
+
+## Notifications
+
+React Toastify is used to display success and error messages for various actions such as adding, editing, or deleting users.
+
+
+---
+
+Feel free to contribute to this project by submitting issues or pull requests. If you have any questions, please contact [your-email@example.com].
