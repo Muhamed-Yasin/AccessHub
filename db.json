@@ -1,0 +1,36 @@
+{
+  "user": [
+    {
+      "name": "John Doe",
+      "email": "john@gmail.com",
+      "age": "21",
+      "usertype": "Crew",
+      "dateField": "2024-05-10",
+      "id": "5f1b"
+    },
+    {
+      "name": "Jane Doe",
+      "email": "janedoe@email.com",
+      "age": "24",
+      "usertype": "Crew",
+      "dateField": "",
+      "id": "7523"
+    },
+    {
+      "name": "Max Imum",
+      "email": "max.imum@gmail.com",
+      "age": "21",
+      "usertype": "TSI",
+      "dateField": "",
+      "id": "bbc0"
+    },
+    {
+      "id": "007c",
+      "name": "Min Imum",
+      "email": "min.imum@email.com",
+      "age": "22",
+      "usertype": "Admin",
+      "dateField": "2024-05-07"
+    }
+  ]
+}
