@@ -1,6 +1,6 @@
-# User Management App
+# AccessHub
 
-This project is a user management application built with React, React Router, and React Hook Form. The app allows you to create, list, edit, and delete users. Additionally, it supports assigning roles and ensuring proper access control. It is a lightweight application that can be used to support help the user management for the management as well as the HR departments.
+This project is a user management application built with React, React Router, and React Hook Form. The app allows you to create, list, edit, and delete users. Additionally, it supports assigning roles and ensuring proper access control. It is a lightweight application designed to support user management for management and HR departments. The app facilitates listing all users or employees along with their roles and is easily customizable to fit any organization's needs.
 
 ## Features
 
