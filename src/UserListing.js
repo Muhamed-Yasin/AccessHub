@@ -11,7 +11,7 @@ const UserListing = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:8000/user')
+    fetch('https://accesshub-backend.onrender.com/user')
       .then((res) => res.json())
       .then((resp) => setUserdata(resp))
       .catch((err) => console.log(err));
@@ -38,7 +38,7 @@ const UserListing = () => {
       toast.error('Please select at least one user to delete.', {autoClose:2000});
     } else {
       selectedIds.forEach((id) => {
-        fetch(`http://localhost:8000/user/${id}`, {
+        fetch(`https://accesshub-backend.onrender.com/user/${id}`, {
           method: 'DELETE',
         })
           .then((res) => {
